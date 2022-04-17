@@ -1,0 +1,106 @@
+:root {
+    --color: #2cc09c;
+}
+
+.topbar {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #212529;
+}
+
+.topbar a {
+    text-decoration: none;
+    color: inherit;
+    height: 40px;
+}
+
+.topbar li, .topbar a {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    transition:  color .3s;
+}
+
+.topbar svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+.topbar ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.topbar li {
+    padding: 0 8px;
+}
+
+.topbar .language {
+    margin-left: auto;
+}
+
+.topbar__infos {
+    background-color: var(--color);
+}
+
+.topbar__links svg {
+    color: var(--color);
+}
+
+.topbar__links a:hover {
+    color: var(--color);
+}
+
+.topbar .language a::after {
+    content: '';
+    display: inline-block;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 6px solid #fff;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+}
+.topbar__container {
+    max-width: 1016px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (min-width: 720px) {
+    .topbar {
+        font-size: 14px;
+        background: linear-gradient(to right, #2cc09c, #2cc09c 50%, #212529 50.01%, #212529);
+    }
+    .topbar__container {
+        display: flex;
+        justify-content: space-between;
+        background: #212529;
+    }
+    .topbar li, .topbar a {
+        height: 55px;
+    }
+    .topbar svg {
+        width: 16px;
+        height: 16px;
+    }
+    .topbar__infos li:last-child {
+        background: #212529;
+        padding-left: 0;
+    }
+    .topbar__infos li:last-child::before {
+        content: '';
+        margin-right: 15px;
+        display: inline-block;
+        border-right: 30px solid transparent;
+        border-bottom: 55px solid var(--color);
+    }
+    .topbar__infos li:last-child svg {
+        color: var(--color);
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+}
